@@ -1,0 +1,360 @@
+.colores-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nombre2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Cada tarjeta de color */
+.color-card {
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.color-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+.color-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cuadrado de color para arrastrar imágenes */
+.color-box {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #f0f0f0;
+}
+
+/* Botón de color debajo del cuadrado */
+.color-btn {
+  width: 100%;
+  font-size: 16px;
+  padding: 8px;
+  background-color: #ff7a00;
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Contenedor de imágenes dispersas */
+.imagenes-colores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+p.descripcion-colores {
+  font-size: 20px;
+  color: #333;
+  margin: 12px 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+p.pronunciation1 {
+  font-size: 17px;
+  color: #555;
+  margin: 8px 0 16px 0;
+}
+
+/* Imágenes de color uniformes */
+.color-img {
+  width: 80px;     
+  height: 80px;    
+  object-fit: cover;  
+  cursor: grab;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content solo imagen pequeña */
+.modal-content.modal-small {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  text-align: center;
+}
+
+.modal-image-small {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* Botón verificar respuestas */
+.btn-dashboardVerificar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #FFA500;
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  float: right;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-dashboardVerificar:hover {
+  background-color: #e39504; 
+  transform: translateY(-2px);
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal-content.modal-small {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* separa la imagen del cuadro de texto */
+}
+
+/* Imagen más grande */
+.modal-image-small {
+  width: 250px;   /* más grande que antes */
+  height: 250px;
+  object-fit: contain;
+}
+
+/* Mensajes dentro de cuadro blanco */
+.mensaje-correcto, .mensaje-incorrecto {
+  font-weight: bold;
+  font-size: 20px;
+  color: #000;                 /* letras negras */
+  background-color: #f2e6b8;       /* cuadro blanco */
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 2px solid;
+  display: inline-block;
+  text-align: center;
+}
+
+.mensaje-correcto {
+  border-color: #e7d89c;
+}
+
+.mensaje-incorrecto {
+  border-color: #e7d89c;
+}
+/* MODAL DE INSTRUCCIONES */
+.modal-instrucciones-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-instrucciones-content {
+  background: linear-gradient(135deg, #fff7e6, #ffe8cc);
+  border-radius: 24px;
+  padding: 2.5rem;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.4s ease;
+  border: 4px solid #ffb84d;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-instrucciones-header h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff8c00;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-instrucciones-body {
+  margin-bottom: 2rem;
+}
+
+.instruccion-texto {
+  font-size: 18px;
+  color: #333;
+  margin: 1rem 0;
+  padding: 0.8rem;
+  background: white;
+  border-radius: 12px;
+  border-left: 5px solid #ffb84d;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.instruccion-texto strong {
+  color: #ff8c00;
+  font-weight: 600;
+}
+
+.btn-comenzar {
+  width: 100%;
+  padding: 1rem;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #ff8c00, #ff6347);
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.4);
+}
+
+.btn-comenzar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.6);
+}
+
+.btn-comenzar:active {
+  transform: scale(0.98);
+}
+
+/* Responsive para el modal */
+@media (max-width: 480px) {
+  .modal-instrucciones-content {
+    padding: 1.5rem;
+  }
+  
+  .modal-instrucciones-header h2 {
+    font-size: 24px;
+  }
+  
+  .instruccion-texto {
+    font-size: 16px;
+  }
+  
+  .btn-comenzar {
+    font-size: 18px;
+  }
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .color-box {
+    width: 100px;
+    height: 100px;
+    font-size: 14px;
+  }
+
+  .color-img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 420px) {
+  .color-img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Responsivo: sm */
+@media (min-width: 640px) {
+  .btn-dashboardVerificar {
+    padding: 0.5rem 1.25rem;
+    font-size: 1.125rem;
+  }
+}
+
+/* Responsivo: md */
+@media (min-width: 768px) {
+  .btn-dashboardVerificar {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+  }
+}

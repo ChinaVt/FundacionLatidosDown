@@ -1,0 +1,78 @@
+.dashboard-background {
+  background: linear-gradient(135deg, #FFE5B4, #FFD580, #FFC266);
+  min-height: 98vh;
+}
+
+/* Título */
+.nombre-cuento {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+
+/* Texto descriptivo */
+.descripcion-cuento {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Contenedor general del cuento */
+.card-cuento {
+  background: #ffffffb9;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Página del cuento */
+.cuento-pagina {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Imagen grande */
+.cuento-imagen {
+  width: 70%;
+  max-height: 550px;
+  object-fit: contain;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+/* Texto grande para niños */
+.cuento-texto {
+  font-size: 26px;
+  line-height: 1.4;
+  color: #000;
+  padding: 0 10px;
+}
+
+/* Botón avanzar */
+.btn-avanzar {
+  font-size: 18px;
+}
+
+/* Mensaje final */
+.fin-cuento {
+  font-size: 28px;
+  color: #444;
+  margin-top: 20px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 480px) {
+  .cuento-imagen {
+    width: 90%;
+  }
+
+  .cuento-texto {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,181 @@
+/* ActivityRompecabezas */
+
+.dashboard-background {
+  background: linear-gradient(135deg, #FFE5B4, #FFD580, #FFC266);
+  min-height: 98vh;
+  
+}
+
+.titulo-abc {
+  font-size: px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.descripcion-abc {
+  font-size: 20px;
+  color: #444;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* ✅ Indicador de nivel */
+.nivel-indicator {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.nivel-texto {
+  font-size: 18px;
+  color: #333;
+  background: #fff;
+  padding: 10px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.nivel-texto strong {
+  color: #ff7a00;
+}
+
+.card-abc {
+  background: white;
+  padding: 2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  gap: 2rem;
+}
+
+.card-video {
+  flex: 1;
+  background: #fcf3e0;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.board-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subtitulo-abc {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.piezas-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.pieza-suelta {
+  border: 3px solid #ffb84d;
+  border-radius: 10px;
+  cursor: grab;
+  transition: transform 0.2s;
+}
+
+.pieza-suelta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 184, 77, 0.5);
+}
+
+.board-panel {
+  position: relative;
+  border: 4px solid #ffb84d;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.board-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  filter: grayscale(60%) brightness(1) opacity(0.35);
+}
+
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.pieza-colocada {
+  position: absolute;
+  z-index: 2;
+  filter: none !important;
+  border: 1px solid rgba(255, 184, 77, 0.6);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content.modal-small {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.modal-image-small {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+}
+
+.mensaje-correcto, .mensaje-incorrecto {
+  font-weight: bold;
+  font-size: 20px;
+  color: #000;
+  background-color: #f2e6b8;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 2px solid;
+  display: inline-block;
+  text-align: center;
+}
+
+.mensaje-correcto {
+  border-color: #e7d89c;
+}
+
+.mensaje-incorrecto {
+  border-color: #e7d89c;
+}

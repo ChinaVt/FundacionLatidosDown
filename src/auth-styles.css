@@ -1,0 +1,319 @@
+/* =====================================================
+   ESTILOS MEJORADOS PARA COMPONENTES DE AUTENTICACIÓN
+   ===================================================== */
+
+/* Animaciones personalizadas */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Clases de utilidad para animaciones */
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out 0.2s backwards;
+}
+
+.animate-slide-down {
+  animation: slide-down 0.6s ease-out;
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 2s ease-in-out infinite;
+}
+
+/* Delays para animaciones escalonadas */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-700 { animation-delay: 700ms; }
+
+/* Mejoras para inputs */
+.input-field {
+  @apply w-full px-4 py-4 bg-gray-50 border-2 border-gray-200 rounded-xl text-lg font-medium transition-all duration-300 outline-none;
+}
+
+.input-field:focus {
+  @apply border-primary-500 bg-white shadow-lg;
+  transform: scale(1.02);
+}
+
+.input-field:hover:not(:focus):not(:disabled) {
+  @apply border-gray-300;
+}
+
+.input-field:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Mejoras para botones */
+.btn {
+  @apply font-bold py-3 px-6 rounded-xl transition-all duration-300 transform;
+}
+
+.btn:hover:not(:disabled) {
+  @apply shadow-lg;
+  transform: scale(1.02);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  @apply opacity-50 cursor-not-allowed;
+  transform: none !important;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white shadow-md;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 hover:bg-gray-300 text-gray-800;
+}
+
+.btn-success {
+  @apply bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-md;
+}
+
+.btn-danger {
+  @apply bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white shadow-md;
+}
+
+/* Efectos de vidrio/glassmorphism */
+.glass-card {
+  @apply bg-white/95 backdrop-blur-lg rounded-3xl shadow-2xl;
+}
+
+.glass-card:hover {
+  @apply shadow-3xl;
+}
+
+/* Efectos de resplandor */
+.glow-primary {
+  box-shadow: 0 0 20px rgba(var(--primary-500), 0.3);
+}
+
+.glow-success {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+}
+
+.glow-error {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+}
+
+/* Transiciones suaves para todos los elementos interactivos */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Personalización del scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6366f1, #8b5cf6);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #4f46e5, #7c3aed);
+}
+
+/* Focus visible para accesibilidad */
+*:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+/* Efectos hover para tarjetas */
+.card-hover {
+  @apply transform transition-all duration-300;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  @apply shadow-xl;
+}
+
+/* Gradientes de fondo */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.bg-gradient-success {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.bg-gradient-warning {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* Efectos de texto */
+.text-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Loading spinner personalizado */
+.spinner {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 3px solid #fff;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Badges y etiquetas */
+.badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.badge-primary {
+  @apply bg-primary-100 text-primary-800;
+}
+
+.badge-success {
+  @apply bg-green-100 text-green-800;
+}
+
+.badge-warning {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.badge-error {
+  @apply bg-red-100 text-red-800;
+}
+
+/* Tooltips */
+.tooltip {
+  @apply absolute invisible opacity-0 transition-all duration-300 bg-gray-900 text-white text-sm px-3 py-2 rounded-lg;
+  transform: translateY(-10px);
+}
+
+.tooltip-trigger:hover .tooltip {
+  @apply visible opacity-100;
+  transform: translateY(0);
+}
+
+/* Sombras personalizadas */
+.shadow-soft {
+  box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-3xl {
+  box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive mejoras */
+@media (max-width: 768px) {
+  .input-field {
+    @apply py-3 text-base;
+  }
+  
+  .btn {
+    @apply py-3 text-base;
+  }
+  
+  h1 {
+    @apply text-3xl;
+  }
+}
+
+/* Dark mode support (opcional) */
+@media (prefers-color-scheme: dark) {
+  .dark-mode {
+    --bg-primary: #1a202c;
+    --bg-secondary: #2d3748;
+    --text-primary: #f7fafc;
+    --text-secondary: #e2e8f0;
+  }
+}

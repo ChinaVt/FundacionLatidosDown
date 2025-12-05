@@ -1,0 +1,10 @@
+p.descripcion {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 18px;
+}
+p.tipo {
+    font-size: 1rem;
+    color: #0f0f0f;
+}
+

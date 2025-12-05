@@ -1,0 +1,99 @@
+/* Dashboard */
+.dashboard-background {
+  background: linear-gradient(135deg, #FFF5E0, #FFE5B4, #FFD580);
+  min-height: 100vh;
+}
+
+/* Header */
+.dashboard-header {
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Botones */
+.btn-dashboard {
+  padding: 0.60rem 1.5rem;
+  border-radius: 1.5rem;
+  background-color: #FFA500;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s;
+}
+.btn-dashboard:hover {
+  background-color: #FF8C00;
+  transform: scale(1.05);
+}
+
+.btn-dashboard:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Cards */
+.card {
+  background-color: #FFF1E0;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-top: 2px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+/* Iconos circulares dentro de cards */
+.card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #FFE5B4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Texto */
+.card h2, .card h3 {
+  font-weight: bold;
+  color: #333;
+}
+
+.card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.p-saludo {
+    margin-top: 0.5rem;
+    font-size: 1.3rem; /* tamaño más grande */
+    font-weight: bold; /* negrilla */
+    margin-top: 30px;
+}
+
+p.perfil {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #141414;
+    margin-top: 15px;
+    
+}
+p.actividad {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 15px;
+}
+p.estadisticas {
+    font-size: 1rem;
+    color: #0f0f0f;
+}
+
+
